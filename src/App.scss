@@ -12,25 +12,28 @@
 html {
 	font-size: 62.5%; // 1rem = 10px
 
-	@include tablet {
+	@include large {
 		font-size: 56.25%; // 1rem = 9px
 	}
 
-	@include mobile {
+	@include small {
 		font-size: 50%; // 1rem = 8px
 	}
 }
 
 body {
+	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1.5;
 	background-color: $body-bg;
 	color: $txt-white-color;
+	letter-spacing: 0.05rem;
 }
 
 a {
 	text-decoration: none;
 	color: unset;
+	@include flex(center, unset);
 }
 
 @media (hover: hover) {
@@ -56,6 +59,14 @@ img {
 	max-width: 100%;
 }
 
+.mb-5 {
+	margin-bottom: 5rem;
+}
+
+.mb-4 {
+	margin-bottom: 4rem;
+}
+
 .mb-3 {
 	margin-bottom: 3rem;
 }
@@ -66,4 +77,16 @@ img {
 
 .section {
 	padding: 0 6rem;
+}
+
+.container {
+	margin: 0 6rem;
+
+	@include large {
+		margin: 0 4rem;
+	}
+
+	@include medium {
+		margin: 0 2rem;
+	}
 }

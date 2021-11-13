@@ -1,14 +1,10 @@
 import React from 'react'
-import Button from '../components/button/Button'
-import { FaBeer } from 'react-icons/fa'
+import Background from '../assets/footer-bg.jpg'
 
 const Home = () => {
 	return (
 		<div>
-			<Button>
-				<FaBeer color='#FFFFFF' fontSize='20px' />
-				Hello
-			</Button>
+			<img src={Background} alt='' />
 		</div>
 	)
 }

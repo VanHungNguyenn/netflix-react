@@ -1,0 +1,54 @@
+@use '../../scss/' as *;
+
+.footer {
+	position: relative;
+	margin-top: 10rem;
+	color: gray;
+
+	&__container {
+		max-width: 980px;
+		margin: auto;
+	}
+
+	&__social {
+		@include flex(center, flex-start);
+
+		&__item {
+			font-size: 30px;
+			margin-right: 2rem;
+		}
+	}
+
+	&__menu,
+	&__service,
+	&__copyright {
+		font-size: 13px;
+	}
+
+	&__menu {
+		display: grid;
+		grid-gap: 14px;
+		grid-template-columns: repeat(4, 1fr);
+
+		@include medium {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__item {
+			a {
+				padding: 0.5rem 0;
+			}
+		}
+	}
+
+	&__service {
+		border: 1px solid $text-gray-color;
+		display: inline-block;
+		padding: 0.5rem;
+		cursor: pointer;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
